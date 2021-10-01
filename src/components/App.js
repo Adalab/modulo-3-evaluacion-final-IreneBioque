@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import "../styles/App.scss";
 import callToApi from "../services/api";
 import Form from "./Form";
+import CharactherList from "./CharacterList";
 
 const App = () => {
   const [character, Setcharacter] = useState([]);
   const [searchName, setSearchName] = useState("");
 
-  // useEffect
+
 
   useEffect(() => {
     callToApi(searchName).then((response) => {
@@ -19,25 +20,22 @@ const App = () => {
     setSearchName(value);
   };
 
-  const renderCharacter = () => {
-    return character.map((character) => {
-      return (
-        <li key={character.id}>
-          Nombre: {character.name} Especie: {character.species}{" "}
-          <img src={character.image} alt={character.name} />
-        </li>
-      );
-    });
-  };
+ 
+
+   const filteredData = character
+      .filter((character) =>
+        character.name
+          .toLocaleLowerCase()
+          .includes(searchName.toLocaleLowerCase())
+      )
+
 
   return (
     <div>
       <h1>Series</h1>
-
       <Form valueForm={searchName} handleSearchName={handleSearchName} />
-
       <h2>Personajes con el nombre: {searchName}</h2>
-      <ul>{renderCharacter()}</ul>
+      <CharactherList data={filteredData} />
     </div>
   );
 };
