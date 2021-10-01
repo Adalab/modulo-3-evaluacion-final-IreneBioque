@@ -44,6 +44,9 @@ const App = () => {
             <CharacterDetail character={selectedContact} />
           </section>
         </Route>
+        <Route>
+            <p>Búscate la vida</p>
+        </Route>
       </Switch>
     </div>
   );

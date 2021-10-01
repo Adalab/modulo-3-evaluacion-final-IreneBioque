@@ -1,5 +1,6 @@
 const Form = (props) => {
   const handleInputChange = (ev) => {
+    ev.preventDefault();
     props.handleSearchName(ev.target.value);
   };
   return (

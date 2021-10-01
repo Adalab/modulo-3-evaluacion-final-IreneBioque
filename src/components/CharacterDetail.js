@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom"
+
 const ContactDetail = (props) => {
 
    return (
@@ -13,10 +14,10 @@ const ContactDetail = (props) => {
          title={props.characterName}
        />
        <ul>
-         <li>Especie: {props.character.species}</li>
-         <li>Planeta de origen: {props.character.planet}</li>
-         <li>Estado: {props.character.status}</li>
-         <li>Episodios en los que sale: {props.character.episodes}</li>
+         <li>Species: {props.character.species}</li>
+         <li>Origin: {props.character.planet}</li>
+         <li>Status: {props.character.status}</li>
+         <li>Episodes: {props.character.episodes}</li>
        </ul>
      </>
    );
