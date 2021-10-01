@@ -8,6 +8,9 @@ const callToApi = (searchName) => {
           species: data.species,
           id: data.id,
           image: data.image,
+          status: data.status,
+          planet: data.origin.name,
+          episodes: data.episode,
         };
       });
       return character;
