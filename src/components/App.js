@@ -25,31 +25,24 @@ const App = () => {
   );
 
   const routeData = useRouteMatch("/character/:id");
-  const characterId = routeData.params.id;
+  const characterId = routeData!==null ? routeData.params.id : '';
   const selectedContact = characters.find(
     (character) => character.id === parseInt(characterId)
   );
-    console.log(characterId);
-  console.log(selectedContact.name);
   return (
     <div>
-      <h1>Rick y Morty</h1>
-      <Form valueForm={searchName} handleSearchName={handleSearchName} />
-      <h2>Personajes con el nombre: {searchName}</h2>
-      <CharactherList data={filteredData} />
       <Switch>
-        <Route path="/character/:id">
-          <section>
-            <CharacterDetail
-              character={selectedContact}
-              characterName={selectedContact.name}
-            />
-          </section>
+        <Route path="/" exact>
+          <h1>Rick y Morty</h1>
+          <Form valueForm={searchName} handleSearchName={handleSearchName} />
+          <h2>Personajes con el nombre: {searchName}</h2>
+          <CharactherList data={filteredData} />
         </Route>
 
-        <Route exact path="/"></Route>
-        <Route>
-          <p>Búscate la vida</p>
+        <Route path="/character/:id">
+          <section>
+            <CharacterDetail character={selectedContact} />
+          </section>
         </Route>
       </Switch>
     </div>

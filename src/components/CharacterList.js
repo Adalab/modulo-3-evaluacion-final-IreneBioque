@@ -1,10 +1,11 @@
- import CharacterCard from "./CharacterCard";
+import CharacterCard from "./CharacterCard";
+
 
  const CharactherList = (props) => {
     return props.data.map((character) => {
       return (
         <li key={character.id}>
-          <CharacterCard characterData={character}/>
+            <CharacterCard characterData={character} />
         </li>
       );
     });

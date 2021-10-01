@@ -10,7 +10,7 @@ const callToApi = (searchName) => {
           image: data.image,
           status: data.status,
           planet: data.origin.name,
-          episodes: data.episode,
+          episodes: data.episode.length,
         };
       });
       return character;
