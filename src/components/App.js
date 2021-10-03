@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import '../styles/layout/_characterDetail.scss';
 import '../styles/App.scss';
 import callToApi from '../services/api';
 import Header from './Header';
@@ -7,6 +8,7 @@ import Form from './Form';
 import CharactherList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 import NotFoundPage from './NotFoundPage';
+import Footer from './Footer';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -55,12 +57,11 @@ const App = () => {
               valueSearchSpice={searchSpices}
               handleSearchSpices={handleSearchSpices}
             />
-            <h2>Personajes con el nombre: {searchName}</h2>
             <CharactherList data={filteredData} searchName={searchName} />
           </Route>
 
           <Route path='/character/:id'>
-            <section>
+            <section className='characterDetail'>
               <CharacterDetail character={selectedContact} />
             </section>
           </Route>
@@ -69,6 +70,7 @@ const App = () => {
           </Route>
         </Switch>
       </main>
+      <Footer />
     </div>
   );
 };

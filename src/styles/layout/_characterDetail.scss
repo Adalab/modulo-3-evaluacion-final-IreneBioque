@@ -1,0 +1,32 @@
+.characterDetail {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.characterLink {
+  font-size: 20px;
+  text-align: end;
+  @media (min-width: 768px) {
+    font-size: 25px;
+  }
+}
+.character {
+  display: flex;
+  align-items: center;
+  background-color: #00b0c8;
+  margin: 10px 0;
+  @media (min-width: 768px) {
+    padding: 0 50px;
+    font-size: 20px;
+  }
+  &__img {
+    transform: scale(80%);
+  }
+  &__list {
+    &--name {
+      font-weight: 600;
+    }
+  }
+}
