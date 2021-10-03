@@ -10,11 +10,11 @@ const CharactherList = (props) => {
     );
   });
   return (
-    <section>
+    <section className='sectionCharacter'>
       {props.data.length !== 0 ? (
         <ul className='list'>{characther}</ul>
       ) : (
-        <p>{`El personaje ${props.searchName} no existe en esta dimensión o galaxia.`}</p>
+        <p className='error'>{`El personaje ${props.searchName} no existe en esta dimensión o galaxia.`}</p>
       )}
     </section>
   );

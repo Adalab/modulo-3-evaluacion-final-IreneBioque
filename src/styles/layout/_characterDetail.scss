@@ -1,20 +1,20 @@
 .characterDetail {
-  height: 80vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
   @media (min-width: 768px) {
-    height: 75vh;
+    height: 50vh;
+  }
+  &__link {
+    font-size: 20px;
+    text-align: end;
+    @media (min-width: 768px) {
+      font-size: 25px;
+    }
   }
 }
 
-.characterLink {
-  font-size: 20px;
-  text-align: end;
-  @media (min-width: 768px) {
-    font-size: 25px;
-  }
-}
 .character {
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@
     }
   }
 }
-// Animación
+// Transición
 .character:hover {
   box-shadow: 0px 0px 40px #04802c;
   transition: box-shadow 0.3s ease-in-out;

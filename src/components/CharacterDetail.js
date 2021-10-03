@@ -4,7 +4,7 @@ import '../styles/layout/_characterDetail.scss';
 const ContactDetail = (props) => {
   return (
     <div>
-      <Link to='/' className='characterLink'>
+      <Link to='/' className='characterDetail__link'>
         <p>Volver atrás</p>
       </Link>
       <article className='character'>
