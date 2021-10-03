@@ -10,6 +10,7 @@ import NotFoundPage from './NotFoundPage';
 const App = () => {
   const [characters, Setcharacters] = useState([]);
   const [searchName, setSearchName] = useState('');
+  const [searchSpices, setsearchSpices] = useState('all');
 
   useEffect(() => {
     callToApi(searchName).then((response) => {
@@ -20,10 +21,19 @@ const App = () => {
   const handleSearchName = (value) => {
     setSearchName(value);
   };
-
-  const filteredData = characters.filter((character) =>
-    character.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
-  );
+  const handleSearchSpices = (value) => {
+    setsearchSpices(value);
+  };
+  const filteredData = characters
+    .filter((character) =>
+      character.name
+        .toLocaleLowerCase()
+        .includes(searchName.toLocaleLowerCase())
+    )
+    .filter(
+      (character) =>
+        searchSpices === 'all' || searchSpices === character.species
+    );
   const orden = filteredData.sort();
   console.log(orden);
   const routeData = useRouteMatch('/character/:id');
@@ -37,7 +47,12 @@ const App = () => {
       <Switch>
         <Route path='/' exact>
           <h1>Rick y Morty</h1>
-          <Form valueForm={searchName} handleSearchName={handleSearchName} />
+          <Form
+            valueSearchName={searchName}
+            handleSearchName={handleSearchName}
+            valueSearchSpice={searchSpices}
+            handleSearchSpices={handleSearchSpices}
+          />
           <h2>Personajes con el nombre: {searchName}</h2>
           <CharactherList data={filteredData} searchName={searchName} />
         </Route>
