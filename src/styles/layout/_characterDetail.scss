@@ -1,8 +1,11 @@
 .characterDetail {
-  height: 75vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
+  @media (min-width: 768px) {
+    height: 75vh;
+  }
 }
 
 .characterLink {
@@ -29,4 +32,9 @@
       font-weight: 600;
     }
   }
+}
+// Animación
+.character:hover {
+  box-shadow: 0px 0px 40px #04802c;
+  transition: box-shadow 0.3s ease-in-out;
 }
