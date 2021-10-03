@@ -1,9 +1,10 @@
 import CharacterCard from './CharacterCard';
+import '../styles/layout/_characterList.scss';
 
 const CharactherList = (props) => {
   const characther = props.data.map((character) => {
     return (
-      <li key={character.id}>
+      <li key={character.id} className='list__element'>
         <CharacterCard characterData={character} />
       </li>
     );
@@ -11,7 +12,7 @@ const CharactherList = (props) => {
   return (
     <section>
       {props.data.length !== 0 ? (
-        <ul>{characther}</ul>
+        <ul className='list'>{characther}</ul>
       ) : (
         <p>{`El personaje ${props.searchName} no existe.`}</p>
       )}

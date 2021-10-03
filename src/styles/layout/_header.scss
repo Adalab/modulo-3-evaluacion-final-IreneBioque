@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: center;
+  @media (min-width: 768px) {
+    padding: 20px;
+  }
+  &__img {
+    transform: scale(60%);
+    @media (min-width: 768px) {
+      transform: scale(100%);
+    }
+  }
+}
