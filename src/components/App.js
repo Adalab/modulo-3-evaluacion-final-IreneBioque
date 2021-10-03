@@ -24,7 +24,8 @@ const App = () => {
   const filteredData = characters.filter((character) =>
     character.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
   );
-  console.log();
+  const orden = filteredData.sort();
+  console.log(orden);
   const routeData = useRouteMatch('/character/:id');
   const characterId = routeData !== null ? routeData.params.id : '';
   const selectedContact = characters.find(
