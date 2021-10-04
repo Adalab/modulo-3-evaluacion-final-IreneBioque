@@ -8,14 +8,14 @@ const FilterByName = (props) => {
   return (
     <>
       <label htmlFor='name' className='form__label'>
-        Busca por el nombre de tu personaje:
+        Search Name:
       </label>
       <input
         className='form__input'
         type='text'
         name='name'
         id='name'
-        placeholder='Busca el nombre de tu personaje'
+        placeholder='Search Name:'
         value={props.valueSearchName}
         onChange={handleInputChange}
       />

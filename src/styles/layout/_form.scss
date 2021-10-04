@@ -1,3 +1,5 @@
+@import '../core/variables';
+
 .form {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
     justify-content: center;
   }
   &__label {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font-main;
     font-weight: 600;
     font-size: 20px;
     padding: 5px 10px;

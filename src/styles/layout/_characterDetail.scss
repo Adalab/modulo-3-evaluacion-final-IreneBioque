@@ -1,8 +1,10 @@
+@import '../core/variables';
+
 .characterDetail {
   height: 75vh;
   display: flex;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-main;
   @media (min-width: 768px) {
     height: 50vh;
   }
@@ -18,7 +20,7 @@
 .character {
   display: flex;
   align-items: center;
-  background-color: #00b0c8;
+  background-color: $card-color;
   margin: 10px 0;
   @media (min-width: 768px) {
     padding: 0 50px;

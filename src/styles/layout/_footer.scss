@@ -1,7 +1,9 @@
+@import '../core/variables';
+
 .footer {
   height: 5vh;
   font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-main;
   display: flex;
   justify-content: center;
   margin: 25px 35px 0;

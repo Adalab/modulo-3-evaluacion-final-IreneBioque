@@ -1,3 +1,5 @@
+@import '../core/variables';
+
 .list {
   height: 75vh;
   display: flex;
@@ -16,8 +18,8 @@
   }
   &__element {
     margin: 10px;
-    background-color: #00b0c8;
-    font-family: 'Montserrat', sans-serif;
+    background-color: $card-color;
+    font-family: $font-main;
     width: 400px;
     @media (min-width: 768px) {
       margin: 0;
@@ -46,7 +48,7 @@
 }
 .error {
   height: 75vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-main;
   font-size: 20px;
   display: flex;
   justify-content: center;
