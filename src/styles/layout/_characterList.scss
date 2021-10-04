@@ -49,8 +49,13 @@
 .error {
   height: 75vh;
   font-family: $font-main;
-  font-size: 20px;
+  font-size: 14px;
   display: flex;
   justify-content: center;
+  margin: 10px;
+  text-align: center;
   margin-top: 20px;
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
 }

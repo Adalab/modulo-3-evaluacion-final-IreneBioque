@@ -10,7 +10,7 @@
     height: 50vh;
   }
   &__link {
-    font-size: 20px;
+    font-size: 18px;
     text-align: end;
     @media (min-width: 768px) {
       font-size: 25px;
@@ -23,6 +23,7 @@
   align-items: center;
   background-color: $card-color;
   margin: 10px 0;
+  font-size: 14px;
   @media (min-width: 768px) {
     padding: 0 50px;
     font-size: 20px;
