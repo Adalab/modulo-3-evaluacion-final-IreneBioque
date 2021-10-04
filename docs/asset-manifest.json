@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.bf9953b8.chunk.css",
-    "main.js": "./static/js/main.91857194.chunk.js",
-    "main.js.map": "./static/js/main.91857194.chunk.js.map",
+    "main.css": "./static/css/main.299a553d.chunk.css",
+    "main.js": "./static/js/main.baf11af4.chunk.js",
+    "main.js.map": "./static/js/main.baf11af4.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.3976f0fa.js",
     "runtime-main.js.map": "./static/js/runtime-main.3976f0fa.js.map",
     "static/js/2.ed1fc56b.chunk.js": "./static/js/2.ed1fc56b.chunk.js",
     "static/js/2.ed1fc56b.chunk.js.map": "./static/js/2.ed1fc56b.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.bf9953b8.chunk.css.map": "./static/css/main.bf9953b8.chunk.css.map",
+    "static/css/main.299a553d.chunk.css.map": "./static/css/main.299a553d.chunk.css.map",
     "static/js/2.ed1fc56b.chunk.js.LICENSE.txt": "./static/js/2.ed1fc56b.chunk.js.LICENSE.txt",
-    "static/media/Logo.de13d484.png": "./static/media/Logo.de13d484.png"
+    "static/media/Logo.de13d484.png": "./static/media/Logo.de13d484.png",
+    "static/media/portal.0ca4959c.png": "./static/media/portal.0ca4959c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.3976f0fa.js",
     "static/js/2.ed1fc56b.chunk.js",
-    "static/css/main.bf9953b8.chunk.css",
-    "static/js/main.91857194.chunk.js"
+    "static/css/main.299a553d.chunk.css",
+    "static/js/main.baf11af4.chunk.js"
   ]
 }
