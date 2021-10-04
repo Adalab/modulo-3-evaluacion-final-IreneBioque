@@ -6,7 +6,7 @@ const NotFoundPage = () => {
   return (
     <div className='notFoundPage'>
       <p className='notFoundPage__text'>
-        Página no encontrada, Rápido Morty, vuelve por el portal{' '}
+        Página no encontrada. Rápido Morty, vuelve por el portal{' '}
       </p>
       <Link to='/'>
         <img

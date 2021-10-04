@@ -1,5 +1,6 @@
 import CharacterCard from './CharacterCard';
 import '../styles/layout/_characterList.scss';
+import '../styles/components/_links.scss';
 
 const CharactherList = (props) => {
   const characther = props.data.map((character) => {

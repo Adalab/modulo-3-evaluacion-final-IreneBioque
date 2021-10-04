@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/layout/_characterDetail.scss';
 import NotFoundPage from './NotFoundPage';
+import '../styles/components/_links.scss';
 
 const ContactDetail = (props) => {
   if (props.character !== undefined) {
@@ -21,7 +22,14 @@ const ContactDetail = (props) => {
             <ul>
               <li>Species: {props.character.species}</li>
               <li>Origin: {props.character.planet}</li>
-              <li>Status: {props.character.status}</li>
+              <li>
+                Status:{' '}
+                {props.character.status === 'Dead' ? (
+                  <i class='fas fa-skull'></i>
+                ) : (
+                  props.character.status
+                )}
+              </li>
               <li>Episodes: {props.character.episodes}</li>
             </ul>
           </div>
