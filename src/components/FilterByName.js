@@ -1,4 +1,5 @@
 import '../styles/layout/_form.scss';
+import PropTypes from 'prop-types';
 
 const FilterByName = (props) => {
   const handleInputChange = (ev) => {
@@ -12,7 +13,6 @@ const FilterByName = (props) => {
       </label>
       <input
         className='form__input'
-        type='text'
         name='name'
         id='name'
         placeholder='Search Name:'
@@ -21,5 +21,12 @@ const FilterByName = (props) => {
       />
     </>
   );
+};
+FilterByName.defaultProps = {
+  inputType: 'text',
+};
+FilterByName.propTypes = {
+  inputValue: PropTypes.string,
+  handleSearchName: PropTypes.func.isRequired,
 };
 export default FilterByName;
