@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   font-family: $font-main;
+  margin: 0 10px;
   @media (min-width: 768px) {
     height: 50vh;
   }
