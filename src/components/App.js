@@ -36,9 +36,16 @@ const App = () => {
     .filter(
       (character) =>
         searchSpices === 'all' || searchSpices === character.species
-    );
-  // const orden = characters.sort();
-  // console.log(orden);
+    )
+    .sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      } else if (a.name < b.name) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
   const routeData = useRouteMatch('/character/:id');
   const characterId = routeData !== null ? routeData.params.id : '';
   const selectedContact = characters.find(
