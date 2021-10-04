@@ -71,7 +71,7 @@ Then you can see that:
 Introducir el comando
 
 ```
-npm run docs
+npm run githubpages
 ```
 
 Y a continuación:
@@ -83,7 +83,7 @@ Y a continuación:
 Enter the command
 
 ```
-npm run docs
+npm run githubpages
 ```
 
 And then:
@@ -103,10 +103,6 @@ And then:
 ## Autores ✒️ / Authors ✒️
 
 - **Irene Bioque** [Github](https://github.com/IreneBioque)
-
-## Colaboradores 🖊️ / Partners 🖊️
-
-- **Adalab** -**Realización de Adalab Starter Kit** [Github](https://github.com/Adalab)
 
 ## Licencia 📄 / Licence 📄
 
