@@ -14,6 +14,11 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [searchName, setSearchName] = useState('');
   const [searchSpices, setsearchSpices] = useState('all');
+  const [searchOrigin, setSearchOrigin] = useState({
+    earth: false,
+    Unknow: false,
+    Abadango: false,
+  });
 
   useEffect(() => {
     callToApi(searchName).then((response) => {
@@ -27,6 +32,15 @@ const App = () => {
   const handleSearchSpices = (value) => {
     setsearchSpices(value);
   };
+  const handleSearchEarth = (checked) => {
+    setSearchOrigin({ ...searchOrigin, earth: checked });
+  };
+  const handleSearchUnknow = (checked) => {
+    setSearchOrigin({ ...searchOrigin, Unknow: checked });
+  };
+  const handleSearchAbadango = (checked) => {
+    setSearchOrigin({ ...searchOrigin, Abadango: checked });
+  };
   const filteredData = characters
     .filter((character) =>
       character.name
@@ -37,6 +51,16 @@ const App = () => {
       (character) =>
         searchSpices === 'all' || searchSpices === character.species
     )
+    .filter((character) => {
+      if (searchOrigin.earth) {
+        return character.planet === 'Earth (C-137)';
+      } else if (searchOrigin.Unknow) {
+        return character.planet === 'unknown';
+      } else if (searchOrigin.Abadango) {
+        return character.planet === 'Abadango';
+      }
+      return true;
+    })
     .sort((a, b) => {
       if (a.name > b.name) {
         return 1;
@@ -63,6 +87,12 @@ const App = () => {
               handleSearchName={handleSearchName}
               valueSearchSpice={searchSpices}
               handleSearchSpices={handleSearchSpices}
+              handleSearchEarth={handleSearchEarth}
+              handleSearchUnknow={handleSearchUnknow}
+              handleSearchAbadango={handleSearchAbadango}
+              earth={searchOrigin.earth}
+              unknow={searchOrigin.Unknow}
+              abadango={searchOrigin.Abadango}
             />
             <CharactherList data={filteredData} searchName={searchName} />
           </Route>
