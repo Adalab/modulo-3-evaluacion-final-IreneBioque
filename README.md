@@ -1,8 +1,8 @@
-# Evaluación final del módulo 3
+# Buscador Rick y Morty
 
-Este proyecto consiste en un buscador de personajes de Rick y Morty para distintos dispositivos, donde puedes filtrar por nombre o especie, además de poder abrir en un link a cada personaje, donde hay información más detallada.
+Este proyecto consiste en un buscador de personajes de Rick y Morty para distintos dispositivos, donde puedes filtrar por nombre o especie, además de poder abrir en un link a cada personaje, donde hay información más detallada, desde cualquier dispositivo.
 
-This project consists of a search engine for Rick and Morty characters for different devices, where you can filter by name or species, as well as being able to open a link to each character, where there is more detailed information.
+This project consists of a search engine for Rick and Morty characters for different devices, where you can filter by name or species, as well as being able to open a link to each character, where there is more detailed information, from any device.
 
 ## Comenzando 🚀 / Starting 🚀
 
